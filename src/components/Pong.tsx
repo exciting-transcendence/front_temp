@@ -1,6 +1,5 @@
 import React, {useState, useEffect, useRef} from 'react';
 import styled from 'styled-components';
-import { ParsedCommandLine } from 'typescript';
 
 const Canvas = styled.canvas`
     display: block;
@@ -111,7 +110,7 @@ const rightPaddle = (arr:boolean[], context:any, y:number) => {
 const Pong = () => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const keysPressed  = [false, false, false, false];
-    const keys = ["ArrowDown", "ArrowUp", "s", "w"];
+    const keys = ["ArrowDown", "ArrowUp", "s", "w"]; 
     const requestAnimationRef = useRef<number>(0);
     let canvas:HTMLCanvasElement|null;
     let gameContext:CanvasRenderingContext2D|null|undefined;
