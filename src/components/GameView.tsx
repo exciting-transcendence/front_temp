@@ -3,6 +3,8 @@
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 import  Pong from './Pong'
+import RowRadioButtonsGroup from './GameOption'
+import Button from '@mui/material/Button';
 
 const Grid = styled.div`
     display:grid;
@@ -50,7 +52,9 @@ const GameView = () => {
         <>
         {state === "watching" ? (
             <Grid>
-            <Game onClick = {handleClick}>게임참여</Game>
+            <Game >
+                <RowRadioButtonsGroup handleClick = {handleClick}/>
+            </Game>
             <Watch>관전</Watch>
             <List>진행중인 게임</List>
             </Grid>
