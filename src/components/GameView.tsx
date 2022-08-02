@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import  Pong from './Pong'
 import RowRadioButtonsGroup from './GameOption'
 import Button from '@mui/material/Button';
+import GameList from './GameList'
 
 const Grid = styled.div`
     display:grid;
@@ -40,6 +41,7 @@ const Profile = styled.div`
     width:20%;
     text-align:center;
 `
+
 const GameView = () => {
     const [state, setState] =useState("watching");
 
@@ -56,7 +58,9 @@ const GameView = () => {
                 <RowRadioButtonsGroup handleClick = {handleClick}/>
             </Game>
             <Watch>관전</Watch>
-            <List>진행중인 게임</List>
+            <List>진행중인 게임
+                <GameList/>
+            </List>
             </Grid>
         ): (
             <Flex>
